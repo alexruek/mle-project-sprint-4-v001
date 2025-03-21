@@ -5,6 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
+*.sbm
+*.pkl
+catboost_info/
 
 # Distribution / packaging
 .Python
@@ -164,6 +167,7 @@ cython_debug/
 # data
 *.parquet
 *.pickle
+*.csv
 
 # project environment
 env_recsys_start/
