@@ -53,7 +53,7 @@ uvicorn recommendations_service:app --reload
 	- Тело запроса:
 ```json
 {
-"user_id": #целое_число,
+"user_id": целое_число,
 "recent_tracks": ["item_id1", "item_id2", ...]  # Необязательный список недавних треков
 }
 ```
@@ -62,7 +62,7 @@ uvicorn recommendations_service:app --reload
 
 ```json
 {
-"user_id": #целое_число,
+"user_id": целое_число,
 "recommendations": ["item_id1", "item_id2", ..., "item_id10"]
 }
 ```
@@ -72,7 +72,9 @@ uvicorn recommendations_service:app --reload
 ```bash
 curl -X POST "http://127.0.0.1:8000/recommendations" -H "Content-Type: application/json" -d '{"user_id": 1517205, "recent_tracks": []}'
 ```
+
 	- Пользователь с онлайн-историей:
+ 
 ```bash
 curl -X POST "http://127.0.0.1:8000/recommendations" -H "Content-Type: application/json" -d '{"user_id": 9999999, "recent_tracks": ["53404", "33311009"]}'
 ```
