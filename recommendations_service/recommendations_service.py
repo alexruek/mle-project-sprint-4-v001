@@ -22,8 +22,8 @@ if not S3_BUCKET_NAME:
     raise ValueError("S3_BUCKET_NAME не найден в .env")
 
 # Пути к файлам в S3
-OFFLINE_RECS_PATH = "s3://s3-student-mle-20240325-963286077c/recsys/recommendations/recommendations.parquet"
-ITEMS_FEATURES_PATH = "s3://s3-student-mle-20240325-963286077c/recsys/features/items_features.parquet"
+OFFLINE_RECS_PATH = f"s3://{S3_BUCKET_NAME}/recsys/recommendations/recommendations.parquet"
+ITEMS_FEATURES_PATH = f"s3://{S3_BUCKET_NAME}/recsys/features/items_features.parquet"
 
 
 def load_data_from_s3(s3_path):
