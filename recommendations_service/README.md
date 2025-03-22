@@ -53,7 +53,7 @@ uvicorn recommendations_service:app --reload
 	- Тело запроса:
 ```json
 {
-"user_id": целое_число,
+"user_id": #целое_число,
 "recent_tracks": ["item_id1", "item_id2", ...]  # Необязательный список недавних треков
 }
 ```
@@ -62,7 +62,7 @@ uvicorn recommendations_service:app --reload
 
 ```json
 {
-"user_id": целое_число,
+"user_id": #целое_число,
 "recommendations": ["item_id1", "item_id2", ..., "item_id10"]
 }
 ```
